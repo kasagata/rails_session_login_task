@@ -35,6 +35,7 @@ class UsersController < ApplicationController
 
     def destroy
         @user = User.find(params[:id])
+        
         @user.destroy
         respond_to do |format|
         format.html { redirect_to user_path, notice: "削除しました。" }
