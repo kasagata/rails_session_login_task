@@ -2,10 +2,13 @@ ja:
   activerecord:
     models:
       task: タスク
+      user: ユーザー
     attributes:
       task:
         title: タイトル
         content: 内容
+        user: ユーザー
+      user:
   errors:
     format: "%{attribute}%{message}"
     messages:

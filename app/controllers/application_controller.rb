@@ -5,7 +5,10 @@ class ApplicationController < ActionController::Base
     private
 
     def login_required
-      redirect_to new_session_path unless current_user
+      if current_user = nil
+        redirect_to new_session_path
+        flash[:notice] = 'ログインしてください'
+      end
     end
 
 end
